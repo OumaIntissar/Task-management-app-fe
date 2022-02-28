@@ -1,0 +1,19 @@
+<div class="container">
+    <br>
+    <div>
+        <h1>
+            Update statut with id : {{statutId}} 
+        </h1>
+    </div>
+    <br>
+    <div class="container" *ngIf="userFormGroup">
+        <form [formGroup]="userFormGroup">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            <button class="btn btn-info mr-2" (click)="backtoStatusPage()">Back</button>
+            <button class="btn btn-success ml-2" (click)="onUpdateStatut()">Save</button>
+        </form>
+    </div>
+</div>

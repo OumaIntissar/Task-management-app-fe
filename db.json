@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Abdo",
+      "lastName": "INTISSAR",
+      "email": "abdo@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Khadija",
+      "lastName": "Bassraoui",
+      "email": "khadija@gmail.com"
+    },
+    {
+      "id": 5,
+      "firstName": "Ayoub",
+      "lastName": "INTISSAR",
+      "email": "a.intissar@gmail.com"
+    },
+    {
+      "firstName": "ouma",
+      "lastName": "intissar",
+      "email": "o.intissar@gmail.com",
+      "id": 6
+    },
+    {
+      "firstName": "nrd",
+      "lastName": "zzz",
+      "email": "zzz",
+      "id": 7
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Task",
+      "toDoDateTime": "2022-02-21T16:37:40"
+    },
+    {
+      "id": 2,
+      "name": "Task 1",
+      "toDoDateTime": "2022-02-21T16:37:40"
+    },
+    {
+      "id": 3,
+      "name": "Task 3",
+      "toDoDateTime": "2022-02-21T16:37:40"
+    },
+    {
+      "id": 4,
+      "name": "Task 8",
+      "toDoDateTime": "2022-02-21T16:37:40"
+    },
+    {
+      "id": 4,
+      "name": "Task 84",
+      "toDoDateTime": "2022-02-21T16:37:40"
+    }
+  ],
+  "statuts": [
+    {
+      "id": 1,
+      "name": "Open"
+    },
+    {
+      "id": 2,
+      "name": "In Progress"
+    },
+    {
+      "id": 3,
+      "name": "Closed"
+    },
+    {
+      "id": 4,
+      "name": "No Statut"
+    }
+  ]
+}

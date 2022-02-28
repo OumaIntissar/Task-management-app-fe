@@ -1,0 +1,22 @@
+<div class="container">
+
+    <br>
+    <div>
+      <h1>
+        Add new statut 
+      </h1>
+  
+    </div>
+    <br>
+    <div class="container" *ngIf="statutFormGroup">
+      <form [formGroup]="statutFormGroup">
+        <div class="form-group">
+          <label>Statut Name</label>
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <button class="btn btn-info mr-2" (click)="backtoStatusPage()">Back</button>
+        <button class="btn btn-success ml-2" (click)="onSaveStatut()">Save</button>
+      </form>
+    </div>
+  
+  </div>

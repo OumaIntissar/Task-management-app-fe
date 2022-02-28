@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <ul class="navbar navbar-nav">
+
+    <li>
+      <button (click)="onNewTask()" class="btn btn-sm btn-success ml-2">
+        <span class="fa fa-plus"></span> New Task </button>
+    </li>
+  </ul>
+  <ul class="navbar navbar-nav ml-auto">
+    <li>
+      <form class="form-inline">
+        <input ngModel name="keyword" type="text">
+        <button class="btn btn-sm btn-outline-info ml-2">
+          <span class="fa fa-search"></span>
+        </button>
+      </form>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="container">
+  <br>
+  <div *ngIf="!tasks?.length">
+    <h4>No tasks to show for this user, add new ones</h4>
+  </div>
+  <div *ngIf="tasks?.length" class="p-4">
+
+    <ng-container class="p-4">
+      <table class="table">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>to Do Date Time</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+        <tr *ngFor="let task of tasks">
+          <td>{{task.id}}</td>
+          <td>{{task.name}}</td>
+          <td>{{task.toDoDateTime}}</td>
+          <td>
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn btn-outline-primary" id="dropdownBasic1"
+                ngbDropdownToggle>{{task.statut.name}}</button>
+
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <div *ngFor="let statut of status">
+                  <button ngbDropdownItem (click)="onChangeStatut(task, statut)">{{statut.name}}</button>
+                </div>
+              </div>
+
+            </div>
+
+          </td>
+          <td>
+            <button class="btn btn-primary ml-2" (click)="onEdit(task)">
+              <span class="fa fa-edit"></span>
+            </button>
+            <button class="btn btn-danger ml-2" (click)="onDelete(task)">
+              <span class="fa fa-trash-o"></span>
+            </button>
+          </td>
+        </tr>
+      </table>
+
+    </ng-container>
+  </div>
+</div>
